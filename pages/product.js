@@ -4,7 +4,7 @@ import Nav from 'components/Nav'
 
 
 const Product = () =>
-  <div>
+  <div className="product-container">
     <Head>
       <title>Product</title>
     </Head>

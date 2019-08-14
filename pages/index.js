@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Nav from 'components/Nav'
 
 const Home = () => (
-  <div>
+  <div className="homepage-container">
     <Head>
       <title>Home</title>
     </Head>
