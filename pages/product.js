@@ -1,6 +1,6 @@
 import React from 'react'
-import Nav from 'components/nav'
 import Head from 'next/head'
+import Nav from 'components/Nav'
 
 
 const Product = () =>
@@ -9,7 +9,7 @@ const Product = () =>
       <title>Product</title>
     </Head>
     <Nav />
-    <h1>Product Page</h1>
+    <h1 className="error">Product Page</h1>
   </div>
 
 export default Product

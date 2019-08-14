@@ -1,0 +1,60 @@
+/**Size**/
+$normal-font: 4rem;
+
+/**Color**/
+$green: #a6c54c;
+$light-olive-green: rgba(166, 197, 76, 0.28);
+$light-green: #f6fcf3;
+$dark-green: #3d4f22;
+$greeny-blue: #4CC0C5;
+$gray: #bfbfbf;
+$light-red: #FF594B;
+$white: #fff;
+$black: #000;
+$black-disable: rgba(37, 37, 37, 0.3);
+$error-color: #9f3a38;
+$success-color: #66bb6a;
+$warning-color: #ffe082;
+$transparent: transparent;
+$primary-gray: #828282;
+$primary-dark: #000;
+$greyish-brown: #4f4f4f;
+$red-dark: #a0192a;
+$gray-box-shadow: #e6e6e6;
+$gray-border-box: rgba(191, 191, 191, 0.2);
+$ui-gray: rgba(34, 36, 38, .15);
+$ui-yellow: #fbbd08;
+
+/**Display**/
+$flex: flex !default;
+
+/**Path*/
+$roboto-font-path: '~materialize-css/fonts/roboto/' !default;
+
+/**fonts**/
+$roboto-font: Roboto,
+'Open Sans',
+sans-serif;
+$opensan-font: 'Nunito Sans',
+sans-serif;
+
+$proxima-font: proxima-nova,
+Avenir,
+Roboto,
+Helvetica,
+Arial,
+sans-serif;
+
+$font-weight-400: 400 !default;
+$font-weight-500: 500 !default;
+$font-weight-600: 600 !default;
+$font-weight-700: 700 !default;
+$font-weight-bold: bold !default;
+
+$btn-font-weight: $font-weight-400;
+$btn-secondary-font-weight: $font-weight-700;
+
+.error {
+  color: $error-color;
+  text-align: center;
+}

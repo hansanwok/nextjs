@@ -1,0 +1,10 @@
+@import 'variables';
+@import 'mixins';
+@import 'global';
+
+// component scss
+@import 'components/Nav/styles';
+
+// pages scss
+@import 'pages/home';
+@import 'pages/product';
