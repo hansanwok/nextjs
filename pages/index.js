@@ -3,6 +3,8 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Nav from 'components/Nav'
 
+import Dog from 'assets/images/dog.png'
+
 const Home = () => (
   <div className="homepage-container">
     <Head>
@@ -16,6 +18,9 @@ const Home = () => (
       <p className='description'>
         To get started, edit <code>pages/index.js</code> and save to reload.
       </p>
+
+      <img src={Dog} alt="" />
+      <div className="scss-image" style={{ width: 200, height: 200 }}></div>
 
       <div className='row'>
         <Link href='https://github.com/zeit/next.js#getting-started'>

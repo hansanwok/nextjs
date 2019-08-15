@@ -16,6 +16,11 @@
       text-align: center;
     }
 
+    .scss-image {
+      // must be static folder not assets folder
+      background-image: url(/static/images/dog.png)
+    }
+
     .row {
       max-width: 880px;
       margin: 80px auto 40px;
