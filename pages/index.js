@@ -5,11 +5,16 @@ import Head from 'next/head'
 import Nav from 'components/Nav'
 
 import Dog from 'assets/images/dog.png'
-import { increaseNumber } from 'actions'
+import { increaseNumber, getGithubApi } from 'actions'
 
 class Home extends Component {
+
+  static getInitialProps = ({ store }) => {
+    store.dispatch(getGithubApi())
+  }
+
   render() {
-    const { number } = this.props;
+    const { number, star } = this.props;
     return (
       <div className="homepage-container">
         <Head>
@@ -23,6 +28,7 @@ class Home extends Component {
           <p className='description'>
             To get started, edit <code>pages/index.js</code> and save to reload.
       </p>
+          <p className='title'>Redux Saga, star of Nextjs: {star} </p>
           <div>
             <h3>test redux</h3>
             <div>
@@ -60,13 +66,17 @@ class Home extends Component {
 }
 
 const mapStateToProps = ({
-  Example: { number }
+  Example: {
+    number,
+    star
+  }
 }) => ({
-  number
+  number,
+  star
 })
 
 const mapActionToProps = {
-  increaseNumber
+  increaseNumber,
 }
 
 export default connect(mapStateToProps, mapActionToProps)(Home)
