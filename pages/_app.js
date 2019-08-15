@@ -1,25 +1,31 @@
 import React from 'react'
-import App from 'next/app'
-
+import { Provider } from 'react-redux'
+import withRedux from 'next-redux-wrapper'
+import App, { Container } from 'next/app'
+import configureStore from 'store/configureStore'
 import 'assets/scss/index.scss'
 
 class MyApp extends App {
-  // Only uncomment this method if you have blocking data requirements for
-  // every single page in your application. This disables the ability to
-  // perform automatic static optimization, causing every page in your app to
-  // be server-side rendered.
-  //
-  // static async getInitialProps(appContext) {
-  //   // calls page's `getInitialProps` and fills `appProps.pageProps`
-  //   const appProps = await App.getInitialProps(appContext);
-  //
-  //   return { ...appProps }
-  // }
+  static async getInitialProps({ Component, ctx }) {
+    let pageProps = {}
+
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx)
+    }
+
+    return { pageProps }
+  }
 
   render() {
-    const { Component, pageProps } = this.props
-    return <Component {...pageProps} />
+    const { Component, pageProps, store } = this.props
+    return (
+      <Container>
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
+      </Container>
+    )
   }
 }
 
-export default MyApp
+export default withRedux(configureStore)(MyApp)
