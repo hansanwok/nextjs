@@ -1,6 +1,7 @@
 const withPlugins = require('next-compose-plugins')
 const sass = require('@zeit/next-sass')
-const optimizedImages = require('next-optimized-images');
+const optimizedImages = require('next-optimized-images')
+const progressBar = require('next-progressbar')
 const path = require('path')
 
 const nextConfig = {
@@ -24,5 +25,6 @@ const nextConfig = {
 
 module.exports = withPlugins([
   sass,
+  progressBar,
   optimizedImages
 ], nextConfig)
