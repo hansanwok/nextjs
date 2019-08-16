@@ -14,9 +14,9 @@ class Home extends Component {
   }
 
   render() {
-    const { number, star } = this.props;
+    const { number, star } = this.props
     return (
-      <div className="homepage-container">
+      <div className='homepage-container'>
         <Head>
           <title>Home</title>
         </Head>
@@ -36,8 +36,8 @@ class Home extends Component {
               <button onClick={this.props.increaseNumber}>Click to increase number</button>
             </div>
           </div>
-          <img src={Dog} alt="" />
-          <div className="scss-image" style={{ width: 200, height: 200 }}></div>
+          <img src={Dog} alt='' />
+          <div className='scss-image' style={{ width: 200, height: 200 }}></div>
 
           <div className='row'>
             <Link href='https://github.com/zeit/next.js#getting-started'>

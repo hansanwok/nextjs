@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "babel-eslint": "^10.0.2",
     "image-trace-loader": "^0.1.0",
     "imagemin-gifsicle": "^6.0.1",
     "imagemin-mozjpeg": "^8.0.0",
@@ -34,6 +35,11 @@
     "webp-loader": "^0.5.0"
   },
   "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "redux-devtools-extension": "^2.13.8"
   }
 }

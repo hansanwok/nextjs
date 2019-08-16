@@ -1,6 +1,6 @@
-import { all, call, fork, put, takeEvery } from 'redux-saga/effects';
-import { GET_GITHUB_API } from 'actions/types';
-import { getGithubApiSuccess, getGithubApiFail } from 'actions';
+import { all, call, fork, put, takeEvery } from 'redux-saga/effects'
+import { GET_GITHUB_API } from 'actions/types'
+import { getGithubApiSuccess, getGithubApiFail } from 'actions'
 import fetch from 'isomorphic-unfetch'
 
 function* handleGetGithubApi() {
@@ -10,11 +10,11 @@ function* handleGetGithubApi() {
     if (data.stargazers_count) {
       yield put(getGithubApiSuccess(data.stargazers_count))
     } else {
-      yield put(getGithubApiFail());
+      yield put(getGithubApiFail())
     }
   } catch (error) {
     console.log('error', error)
-    yield put(getGithubApiFail());
+    yield put(getGithubApiFail())
   }
 }
 
@@ -25,5 +25,5 @@ function* watchGetGithubApi() {
 export default function* exampleSaga() {
   yield all([
     fork(watchGetGithubApi)
-  ]);
+  ])
 }
